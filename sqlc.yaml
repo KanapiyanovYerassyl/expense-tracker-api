@@ -1,10 +1,10 @@
 version: "2"
 sql:
   - engine: "postgresql"
-    queries: "query.sql"
-    schema: "schema.sql"
+    queries: "./database/sqlc/query.sql"
+    schema: "./database/migrations"
     gen:
       go:
-        package: "expensetracker"
+        package: "expense-tracker"
         out: "database/sqlc"
         sql_package: "pgx/v5"
